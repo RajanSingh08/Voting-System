@@ -1,0 +1,78 @@
+@import "../../mixins.scss";
+
+.header {
+  // min-width: 300px;
+  padding: 10px 30px;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  margin-bottom: 5vh;
+  .logo {
+    cursor: pointer;
+    font-size: 20px;
+    &::first-letter {
+      color: rgb(240, 82, 34);
+    }
+  }
+
+  button {
+    position: relative;
+    background-color: transparent;
+    border: none;
+    svg {
+      font-size: 26px;
+      color: rgb(240, 82, 34);
+    }
+    @include md {
+      display: none;
+    }
+  }
+  .menuOptions {
+    list-style-type: none;
+    padding-left: 0;
+    display: none;
+    @include md {
+      display: flex;
+      width: fit-content;
+      gap: 40px;
+      // max-width: 400px;
+    }
+    li {
+      &:hover {
+        color: rgb(240, 82, 34);
+        cursor: pointer;
+      }
+    }
+  }
+  .menu {
+    @include md {
+      display: none;
+    }
+    z-index: 999;
+    width: fit-content;
+    position: absolute;
+    list-style-type: none;
+    padding-left: 0;
+    right: 10px;
+    top: 60px;
+    background-color: var(--softBg);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 10px;
+    border: 2px solid rgb(240, 82, 34);
+    li {
+      svg {
+        color: var(--textColor);
+        font-size: 24px;
+        cursor: pointer;
+        &:hover {
+          color: rgb(240, 82, 34);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+@import "../../mixins.scss";
+
+.container {
+  .pollContainer {
+    h1 {
+      color: rgb(240, 82, 34);
+    }
+    width: 80%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .disable {
+      pointer-events: none;
+      opacity: 0.5;
+    }
+    .vote {
+      border: none;
+      background-color: rgb(240, 82, 34);
+      color: white;
+      border-radius: 8px;
+      padding: 6px 12px;
+    }
+    .candidates {
+      list-style-type: none;
+      padding-left: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      .candidate {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--softBg);
+        border-radius: 6px;
+        padding: 10px;
+        .row {
+          h4 {
+            font-size: 14px;
+          }
+          p {
+            font-size: 14px;
+            color: var(--softTextColor);
+            font-weight: 500;
+          }
+          display: flex;
+          gap: 10px;
+          align-items: center;
+          button {
+            border: none;
+            background-color: rgb(240, 82, 34);
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            svg {
+              font-size: 16px;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}

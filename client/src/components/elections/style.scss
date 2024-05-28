@@ -1,0 +1,81 @@
+@import "../../mixins.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1 {
+    font-weight: 500;
+  }
+  .elections {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 80%;
+    max-width: 500px;
+    padding-bottom: 30px;
+    @include lg {
+      display: flex;
+      max-width: 1000px;
+      justify-content: space-between;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    li {
+      background-color: var(--softBg);
+      flex-grow: 1;
+      padding: 10px;
+      border-radius: 10px;
+      gap: 10px;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      @include lg {
+        width: 30%;
+      }
+      button {
+        background-color: rgb(240, 82, 34);
+        color: white;
+        border-radius: 10px;
+        border: none;
+        height: 36px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        align-items: center;
+        p {
+          font-size: 14px;
+          color: white;
+        }
+        svg {
+          font-size: 20px;
+        }
+      }
+      h1 {
+        font-size: 24px;
+        font-weight: 500;
+      }
+      p {
+        color: var(--softTextColor);
+        font-size: 12px;
+      }
+      .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .col {
+        display: flex;
+        flex-direction: column;
+        span {
+          font-size: 12px;
+          color: var(--textColor);
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}

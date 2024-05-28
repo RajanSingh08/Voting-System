@@ -1,0 +1,54 @@
+@import "../../mixins.scss";
+
+.people {
+  min-height: 100vh;
+  min-width: 300px;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  color: var(--textColor);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1 {
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .usersContainer {
+    width: 80%;
+    max-width: 1000px;
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    li {
+      width: 25vw;
+      display: flex;
+      align-items: start;
+      gap: 10px;
+      background-color: var(--softBg);
+      padding: 10px;
+      border-radius: 8px;
+      svg {
+        color: rgb(240, 82, 34);
+        font-size: 20px;
+        margin-top: 5px;
+      }
+      h4{
+          font-size: 1.2rem;
+          font-weight: 500;
+      }
+      span{
+          font-size: 0.8rem;
+          display: flex;
+          gap: 7px;
+        b{
+          font-weight: 500;
+        }
+        p{
+
+        }
+      }
+
+    }
+  }
+}

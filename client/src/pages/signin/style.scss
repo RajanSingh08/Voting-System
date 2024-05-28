@@ -1,0 +1,146 @@
+@import "../../mixins.scss";
+
+.loginContainer {
+  gap: 10px;
+  min-height: 100vh;
+  min-width: 300px;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  color: var(--textColor);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 1s ease-in-out;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .LoginForm {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+    background-color: var(--softBg);
+    border-radius: 10px;
+    padding: 3vh 2vw;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale(1.02);
+    }
+
+    .heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      svg {
+        color: rgb(240, 82, 34);
+        font-size: 36px;
+        transition: color 0.3s;
+
+        &:hover {
+          color: rgb(200, 60, 20);
+        }
+      }
+    }
+
+    .inputContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+
+      label {
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      input {
+        font-size: 14px;
+        outline: none;
+        border: none;
+        padding: 10px;
+        border-radius: 8px;
+        transition: box-shadow 0.3s;
+
+        &:focus {
+          box-shadow: 0 0 0 2px rgb(240, 82, 34);
+        }
+      }
+    }
+
+    .selectContainer {
+      label {
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      .css-yk16xz-control {
+        border: none;
+        box-shadow: 0 0 0 2px rgb(240, 82, 34);
+        transition: box-shadow 0.3s;
+
+        &:hover {
+          box-shadow: 0 0 0 3px rgb(240, 82, 34);
+        }
+      }
+    }
+
+    .checkboxContainer {
+      margin-top: -10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding-left: 4px;
+
+      input {
+        height: 14px;
+        width: 14px;
+      }
+
+      label {
+        font-size: 12px;
+      }
+    }
+
+    button {
+      background-color: rgb(240, 82, 34);
+      border: none;
+      color: white;
+      height: 40px;
+      border-radius: 8px;
+      font-size: 14px;
+      transition: background-color 0.3s, transform 0.3s;
+
+      &:hover {
+        background-color: rgb(200, 60, 20);
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  p {
+    max-width: 500px;
+
+    span {
+      cursor: pointer;
+      color: rgb(240, 82, 34);
+      margin-left: 6px;
+      transition: color 0.3s;
+
+      &:hover {
+        color: rgb(200, 60, 20);
+      }
+    }
+  }
+}
